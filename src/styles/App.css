@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Manrope:wght@200;400;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/*------------------------ DEFAULT STYLES ------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family-robot);
+
+}
+/*------------------------ CSS VARIABLES ------------------------*/
+:root{
+    --color-main-dark: #252627;
+    --color-main: #2C2D2D;
+    --font-family-robot: 'Roboto', sans-serif;
+    --darkBg-display: none; /* включить/выключить затемнение при открытии карточки*/
+
+}
+/*------------------------ APP ------------------------*/
+.App {
+    position: relative;
+    
+    width: 100%;
+    height: fit-content;
+    min-height: 100vh;
+    background-color: var(--color-main-dark);
+}
+
+.App::after{ /* Затемнение при открытии карточки*/ 
+    display: var(--darkBg-display);
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.33);
+    z-index: 21;
+}
+body::-webkit-scrollbar { /* убираем скролл */
+    display: none;
+  }
+  
+body {
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+} 
+
+/*------------------------ HEADER ------------------------*/
+.header {
+    position: fixed;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    background-color: #1f1f21;
+    padding: 24px;
+    z-index: 23;
+}
+
+.header::after{ /* Затемнение при открытии карточки*/ 
+    display: var(--darkBg-display);
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.33);
+    z-index: 24;
+}
+.logo {
+    font-family: var(--font-family-robot);
+    font-weight: 500;
+    line-height: 27px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+}
+
+/*------------------------ PAGE ------------------------*/
+.page {
+    width: 100%;
+    min-width: 400px;
+    height: fit-content;
+    padding: 95px 130px 0;
+    display: flex;
+    flex-direction: column;
+    
+}
+/*------------------------ USERCARDLIST ------------------------*/
+.usercardlist {
+    width: 100%;
+    height: fit-content;
+    padding:  20px 0 20px;
+
+    align-self: center;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+    grid-gap: 20px;
+    row-gap: 20px;
+    justify-content: start; 
+   
+    overflow-y: hidden;
+    background-color: var(--color-main-dark);
+
+
+}
+
+.usercardlist::-webkit-scrollbar {
+    display: none !important;
+}
+
+.usercardlist {
+    -ms-overflow-style: none !important;  
+    scrollbar-width: none !important;  
+}
+
+.usercard {
+    min-width: 400px;
+    width: 400px;
+    height: fit-content;
+
+    background-color: var(--color-main);
+    color: #fff;
+
+    border-radius: 20px;
+    padding: 12px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.13);
+    
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.usercard__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.usercard__head {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.usercard__logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: #545454;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 30px;
+}
+
+.usercard__name-username {
+    height: fit-content;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.usercard__name {
+    font-weight: 500;
+    font-size: 24px;
+
+    line-height: 28px;
+}
+
+.usercard__username {
+    font-size: 16px;
+
+    line-height: 19px;
+}
+
+.usercard__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.usercard__info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.usercard__info-logo {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usercard__info-text {
+    font-size: 15px;
+}
+
+/*------------------------ SELECT ------------------------*/
+/* checkbox в опциях дропдауна */
+.css-checkbox { position: absolute; overflow: hidden; clip: rect(0 0 0 0); height: 1px; width: 1px; margin: -1px; padding: 0; border: 0;  box-shadow:  2px 10px 0px rgba(38, 51, 77, 0.03);}#inputPreview { display: flex; gap: 20px; justify-content: center;	}.css-checkbox + label { position: relative; font-size: 14px; cursor: pointer; display: inline-flex; align-items: center; height: 20px; color: rgb(255, 255, 255); }.css-checkbox + label::before { content: " "; display: inline-block; vertical-align: middle; margin-right: 10px; width: 20px; height: 20px; background-color: white; border-width: 0px; border-style: solid; border-color: rgb(255, 255, 255); border-radius: 5px; box-shadow: 0px 2px 10px 0px rgba(38, 51, 77, 3%) inset; }
+.css-checkbox:checked + label::after { 
+    content: " ";
+    background-image: url("../components/UI/icons/checkedIcon.svg"); 
+    background-repeat: no-repeat; background-size: 8px 6px; background-position: center center; position: absolute; display: flex; justify-content: center; align-items: center; margin-left: 0px; left: 0px; top: 0px; text-align: center; background-color: transparent; font-size: 10px; height: 20px; width: 20px; }
+.options-checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px !important;
+    border: none;
+    box-shadow:  0px 2px 10px 0px rgba(38, 51, 77, 0.03);
+}
+.options-checkbox:focus {
+    border: none !important;
+}
+/* стрелка в селекте */
+.myclass__indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.myclass__indicator {
+    padding: 0 16px 0 16px !important;
+}
+
+/* убираем скролл дропдауна */
+.myclass__menu-list::-webkit-scrollbar { 
+    display: none !important;
+}
+.myclass__menu-list { 
+    -ms-overflow-style: none !important;  
+    scrollbar-width: none !important;  
+}
+/* цвет опций при фокусе*/
+.myclass__option:active {
+    background-color: #7b7b7b !important;
+}
+.myclass__option--is-focused:active, .myclass__option--is-selected:active {
+    background-color: #7b7b7b !important;
+}
+.myclass__control:hover {
+    background-color: #7b7b7b !important;
+}
+.myclass__menu-list {
+    padding: 0 !important;
+    overflow: hidden;
+    border-radius: 10px;
+}
+/* убираем placeholder при фокусе*/
+.myclass__control--is-focused  .myclass__placeholder {
+    display: none;
+}
+
+.myclass__input {
+    height: 0;
+}
+
+.myclass__value-container {
+    padding: 0 16px !important;
+}
+.myclass__value-container--has-value .myclass__input {
+    opacity: 1 !important;
+    min-width: 100px !important;
+    width: fit-content !important;
+    height: 20px;
+    line-height: 20px;
+}
+.myclass__control--is-focused  .myclass__input {
+    width: fit-content !important;
+    opacity: 1 !important;
+    z-index: 9;
+    height: 20px;
+    line-height: 20px;
+
+}
+.myclass__control--is-focused  .myclass__input::placeholder {
+    color: #545454 !important;
+}
+.myclass__value-container--has-value .myclass__input::placeholder {
+    color: #ffffff;
+}
+/*------------------------ FILTERCONTROLS ------------------------*/
+.filterControls {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+    font-family: var(--font-family-robot);
+}
+
+.filterControls__counter {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 34px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #878787;
+}
+
+
+.filterControls__btn__clear-filter {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #fff;
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.filterControls__chosenFilters {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #fff;
+    padding: 2px 8px;
+}
+
+.filterControls__chosenFilter {
+    color: #878787;
+}
+
+
+/*------------------------ CSSTRANSITION ------------------------*/
+
+.usercard-enter {
+opacity: 0.1;
+transition: opacity 300ms linear;
+}
+
+.usercard-enter-active, .usercard-enter-done {
+opacity: 1;
+}
+
+.usercard-exit {
+opacity: 1;
+}
+
+.usercard-exit-active {
+opacity: 0.1;
+transition: opacity 300ms linear;
+}
+
+/*------------------------ MEDIA ------------------------*/
+@media (max-width: 660px) {
+ .page {    
+    padding:  95px 0 0 0;
+    width: fit-content !important;
+    margin: 0 auto}
+}
