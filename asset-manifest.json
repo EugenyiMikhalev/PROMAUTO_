@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/PROMAUTO_/static/css/main.792ddcf2.css",
+    "main.css": "/PROMAUTO_/static/css/main.aee68f93.css",
     "main.js": "/PROMAUTO_/static/js/main.eae98388.js",
     "static/media/checkedIcon.svg": "/PROMAUTO_/static/media/checkedIcon.8beece02cbc25610ae9a.svg",
     "index.html": "/PROMAUTO_/index.html",
-    "main.792ddcf2.css.map": "/PROMAUTO_/static/css/main.792ddcf2.css.map",
+    "main.aee68f93.css.map": "/PROMAUTO_/static/css/main.aee68f93.css.map",
     "main.eae98388.js.map": "/PROMAUTO_/static/js/main.eae98388.js.map"
   },
   "entrypoints": [
-    "static/css/main.792ddcf2.css",
+    "static/css/main.aee68f93.css",
     "static/js/main.eae98388.js"
   ]
 }
